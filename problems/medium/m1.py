@@ -35,6 +35,9 @@ print("-------------Mathematical Operation Menu---------------")
     b=int(input("Enter second numbers: "))
 
     if choice == 1:
+ 
+        print(f"Addition of {a} and {b} : {a + b}")   
+ 
         print("Addition:", a + b)   
     elif choice == 2:
         print("Subtration:", a - b)   
@@ -61,22 +64,36 @@ math_operations_menu()
  
     if choice == 1:
         print(f"Subtraction of {a} and {b}:{a - b}")   
+ 
     elif choice == 2:
-        print(f"Addition of {a} and {b}:{a + b}")   
+        print(f"Subtraction of {a} and {b} : {a - b}")   
     elif choice == 3:
-        print(f"Division of {a} and {b}:{a / b}")   
+        print(f"Division of {a} and {b} : {a / b}")   
     elif choice == 4:
+ 
+        print(f"Multiplication of {a} and {b} : {a * b}")   
+    elif choice == 5:
+        print(f"Modulus of {a} and {b} : {a % b}")   
+ 
         print(f"Multiplication of {a} and {b}:{a * b}")   
      elif choice == 5:
         print(f"Modulus of {a} and {b}:{a // b}")   
-    elif choice == 6:
-        print(f"{a} to the power of {b}:{a**b}")
+     elif choice == 6:
+        print(f"{a} to the power of {b} : {a**b}")
     else:
         print("Invalid option")
 math_operations_menu()
  
         print("Invalid option!!!")
 print("-------------Mathematical operation menu---------------")
+ 
+print("1. Subtract")
+print("2. Add")
+print("3. Multiply")
+print("4. Divide")
+print("5. Modulus")
+print("6. Exponential")
+=======
  
 print("1. Add")
 print("2. Subtract")
@@ -96,6 +113,7 @@ except ValueError:
 print("-------------------------------------------------------")
  
 print("6. Expontential")
+ 
 choice = int(input("Enter your choice: "))
 math_operations_menu(choice)
 print("-------------------------------------------------------")
