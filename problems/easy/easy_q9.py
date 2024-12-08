@@ -7,16 +7,8 @@ def factorial(n):
     return result
 
 if __name__ == "__main__":
- 
-    n= int(input("Enter the Number :"))
-    print(factorial(n))
 
  
     num = int(input("Enter the Number :"))
- 
     print(factorial(num))
- 
     
-     res=factorial(num)
-    print(res)
-     
