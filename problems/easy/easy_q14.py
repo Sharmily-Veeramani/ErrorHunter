@@ -7,7 +7,10 @@ def vowel_or_consonant(char):
         'o': "Vowel",
         'u': "Vowel",
     }
-    return switch.get(char.lower(),"Constant")   
+    if char.isalpha():
+        return switch.get(char.lower(),"Consonant") 
+    else:
+       return "Not a letter"  
 if __name__ == "__main__":
     characterInput  = input("Enter the charactrer : ")
     if len(characterInput)==1:
