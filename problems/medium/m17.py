@@ -9,8 +9,9 @@ def reverse_list(lst):
     
     return lst
  
-input_list = [1, 2, 3, 4, 5]
-print("Original list:", input_list)
+input_list = input("Enter elements sep by commas : ")
+re_list=list(map(int, input_list.split(',')))
+print("Original list:", re_list)
 
-reversed_list = reverse_list(input_list)
+reversed_list = reverse_list(re_list)
 print("Reversed list:", reversed_list)
