@@ -3,7 +3,15 @@ def string_manipulation_menu():
     print("2. Reverse String")
     print("3. Check Palindrome")
     print("4. Replace Substring")
-    choice = int(input("Enter your choice: "))
+    while True:
+        try:
+            choice = int(input("Enter your choice: "))
+            if 1 <= choice <= 4:
+                break
+            else:
+                print("Invalid choice! Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid choice! Please enter a number between 1 and 4.")
 
     s = input("Enter a string: ")
 
