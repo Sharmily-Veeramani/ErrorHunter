@@ -3,9 +3,25 @@ def number_analysis_menu():
     print("2. Factorial")
     print("3. Fibonacci Sequence")
     print("4. Sum of Digits")
-    choice = int(input("Enter your choice: "))
+    while True:
+        try:
+            choice = int(input("Enter your choice: "))
+            if 1 <= choice <= 4:
+                break
+            else:
+                print("Invalid choice! Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid choice! Please enter a number between 1 and 4.")
 
-    n = int(input("Enter a number: "))
+    while True:
+        try:
+            n = int(input("Enter a number: "))
+            if n >= 0:
+                break
+            else:
+                print("Invalid input! Please enter a non-negative integer.")
+        except ValueError:
+            print("Invalid input! Please enter a non-negative integer.") 
 
     if choice == 1:
         is_prime = True
