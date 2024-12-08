@@ -9,8 +9,10 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    return x / y
-
+    if y == 0:
+        return "Error! Division by zero is not allowed."
+    else:
+        return x / y
 while True:
     print("\nMENU")
     print("1. Add")
@@ -20,23 +22,25 @@ while True:
     print("5. Exit")
 
     choice = input("Enter choice (1-5): ")
+    if choice in ['1', '2', '3', '4']:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
 
-    if choice == '5':
+        if choice == '1':
+            result = add(num1, num2)
+        elif choice == '2':
+            result = subtract(num1, num2)
+        elif choice == '3':
+            result = multiply(num1, num2)
+        elif choice == '4':
+            result = divide(num1, num2)
+
+        print("Result: ", result)
+
+    elif choice == '5':
+        print("Exiting...")
         break
 
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
-
-    if choice == '1':
-        result = add(num1, num2)
-    elif choice == '2':
-        result = subtract(num1, num2)
-    elif choice == '3':
-        result = multiply(num1, num2)
-    elif choice == '4':
-        result = divide(num1, num2)
     else:
         print("Invalid choice")
-        continue
-
-    print("Result: ", result)
+    
