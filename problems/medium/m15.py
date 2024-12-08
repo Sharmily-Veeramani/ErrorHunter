@@ -2,9 +2,10 @@
 a=input("Enter Number:")
 def Arms(a):
    e=0
-   for i in a:
+   g=str(a)
+   for i in g:
       c=int(i)
-      d=c*c*c
+      d=c**len(g)
       e+=d
    return e
 
