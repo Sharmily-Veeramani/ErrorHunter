@@ -9,11 +9,11 @@ def file_handling_menu():
 
     if choice == 1:
         data = input("Enter data to write: ")
-        with open(filename, "r") as f:  
+        with open(filename, "w") as f:  
             f.write(data)
     elif choice == 2:
         with open(filename, "r") as f:
-            print(f.read(10))  
+            print(f.read())  
     elif choice == 3:
         with open(filename, "r") as f:
             lines = len(f.read().split("\n"))
