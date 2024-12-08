@@ -20,11 +20,15 @@ def game_menu():
             options = ["rock", "paper", "scissors"]
             computer_choice = options[random.randint(0, 2)]
             if user_choice == computer_choice:
-                print("You Lose!")   
+                print("It's a tie!")
+            elif (user_choice == "rock" and computer_choice == "scissors") or \
+                 (user_choice == "scissors" and computer_choice == "paper") or \
+                 (user_choice == "paper" and computer_choice == "rock"):
+                print("You win!")
             else:
-                print("You Wins!")
+                print("Computer wins!")
         elif choice == 3:
-            dice = random.randint(1, 8)  
+            dice = random.randint(1, 6)  
             print("Dice rolled:", dice)
         elif choice == 4:
             print("Exiting...")
@@ -33,11 +37,11 @@ def game_menu():
             print("Invalid Choice")
  
 x=input("Can we play some games?? (type yes and no)")
-if x=="yes":
+if x.lower()=="yes":
     game_menu()
 else:
     print("Okey , let's play later!")
  
 
-game_menu()
+
  
