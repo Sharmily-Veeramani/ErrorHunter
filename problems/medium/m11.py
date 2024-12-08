@@ -22,7 +22,7 @@ def a_circle(radius):
     print("Area of Circle: ", area)   
 
 def a_triangle(base, height):
-    area = base * height 
+    area = (base * height)/2 
     print("Area of Triangle: ", area)
 
 def a_rectangle(height, width):
@@ -30,7 +30,7 @@ def a_rectangle(height, width):
     print("Area of Rectangle: ", area)
 
 def a_square(side):
-    area = side *2  
+    area = side *side 
     print("Area of Square: ", area)
     
 print("\nWELCOME TO MENSURATION PROGRAM! TRY CALCULATING PERIMETER AND AREA OF DIFFERENT GEOMETRIC SHAPES.")
@@ -43,14 +43,14 @@ while True:
     print("3. Rectangle")
     print("4. Square")
     print("5. Exit")
-    shape_choice = int(input("\nEnter your choice of shape for calculations: "))
+    shape_choice = int(input("\nEnter your choice of shape for calculations btwn 1 to 5 : "))
     
     if shape_choice == 1:
         while True:
             print("\n1. Calculate perimeter of Circle")
             print("2. Calculate area of Circle")
             print("3. Exit")
-            choice1 = int(input("\nEnter choice for calculations: "))
+            choice1 = int(input("\nEnter choice for calculations between 1 to 3: "))
             if choice1 == 1:
                 radius = float(input("Enter Radius of Circle: "))   
                 per_circle(radius)   
@@ -67,7 +67,7 @@ while True:
             print("\n1. Calculate perimeter of Triangle")
             print("2. Calculate area of Triangle")
             print("3. Exit")
-            choice1 = int(input("\nEnter choice for calculations: "))
+            choice1 = int(input("\nEnter choice for calculations between 1 to 3 : "))
             if choice1 == 1:
                 side1 = float(input("Enter length of side1: "))
                 side2 = float(input("Enter length of side2: "))
@@ -87,7 +87,7 @@ while True:
             print("\n1. Calculate perimeter of Rectangle")
             print("2. Calculate area of Rectangle")
             print("3. Exit")
-            choice1 = int(input("\nEnter choice for calculations: "))
+            choice1 = int(input("\nEnter choice for calculations between 1 to 3: "))
             if choice1 == 1:
                 height = float(input("Enter height of rectangle: "))
                 width = float(input("Enter width of rectangle: "))
@@ -106,7 +106,7 @@ while True:
             print("\n1. Calculate perimeter of Square")
             print("2. Calculate area of Square")
             print("3. Exit")
-            choice1 = int(input("\nEnter choice for calculations: "))
+            choice1 = int(input("\nEnter choice for calculations btwn 1 to 3: "))
             if choice1 == 1:
                 side = float(input("Enter side of square: "))
                 per_square(side)
