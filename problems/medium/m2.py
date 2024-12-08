@@ -3,7 +3,15 @@ def array_operations_menu():
     print("2. Largest Element")
     print("3. Smallest Element")
     print("4. Sort Array")
-    choice = int(input("Enter your choice: "))
+    while True:
+        try:
+            choice = int(input("Enter your choice: "))
+            if 1 <= choice <= 4:
+                break
+            else:
+                print("Invalid choice! Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid choice! Please enter a number between 1 and 4.")
 
     arr = list(map(int, input("Enter array elements separated by space: ").split()))
 
@@ -21,9 +29,6 @@ def array_operations_menu():
         print("Invalid option")
 array_operations_menu()
  
-        print("Sorted Array:",arr) 
-    else:
-        print("Invalid option")
-array_operations_menu()
+        
        
  
