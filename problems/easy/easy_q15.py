@@ -9,7 +9,8 @@ def grade_description(grade):
     }
     return switch.get(grade.upper(), "Please enter a valid grade") 
 if __name__ == "__main__":
-    rs = grade_description('Z')
+    grade=input("Enter your grade (A-F): ")
+    rs = grade_description(grade)
     print(rs)
 
     
