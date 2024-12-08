@@ -13,16 +13,18 @@ def student_record_menu():
             roll = input("Enter Roll Number: ")
             name = input("Enter Name: ")
             marks = input("Enter Marks: ")
-            students[name] = (roll, marks)     
+            students[roll] = (name, marks)     
         elif choice == 2:
             for roll, details in students.items():
                 print(f"Roll: {roll}, Name: {details[0]}, Marks: {details[1]}")  
+            else:
+                print("No records found.")
         elif choice == 3:
             roll = input("Enter Roll Number to Search: ")
             if roll in students:
                 print(f"Name: {students[roll][0]}, Marks: {students[roll][1]}")
             else:
-                print("Record Found")   
+                print("Record not Found")   
         elif choice == 4:
             roll = input("Enter Roll Number to Delete: ")
             if roll in students:
@@ -35,3 +37,4 @@ def student_record_menu():
             break
         else:
             print("Invalid Choice")
+student_record_menu()
